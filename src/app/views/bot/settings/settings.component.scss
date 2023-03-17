@@ -1,0 +1,97 @@
+@import "../../../../assets/styles/variable";
+@import "../../../../assets/styles/mixins";
+@import "../../../../assets/styles/fonts";
+@import "../../../../assets/styles/global";
+
+.settings {
+  padding: 0 10px 10px 10px;
+  //background-image: url("../../../../assets/images/bot/fon/3.webp"), url("../../../../assets/images/bot/fon/4.webp");
+  //background-repeat: no-repeat;
+  //background-position: -5% 64%, 99% 125%;
+  h3 {
+    @include title_40;
+    margin-bottom: 29px;
+  }
+  form {
+    background: #17181E;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+    .form-header {
+      @include header_window_info;
+      padding: 14px 13px 18px;
+    }
+    .form-body {
+      background-color: $background_element;
+      padding: 6px 21px 44px 13px;
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+      label {
+        display: flex;
+        flex-direction: column;
+        span {
+          @include title_32;
+          margin-bottom: 10px;
+        }
+
+      }
+    }
+    .form-footer {
+      border-top: 1px solid rgba(255, 255, 255, 0.5);
+      border-radius: 5px;
+      padding: 8px 13px 9px;
+    }
+  }
+}
+
+@media screen and (max-width: 1215px) {
+  .settings {
+    h3 {
+      font-size: 30px;
+    }
+    form {
+      .form-header {
+        h4{
+          font-size: 20px;
+        }
+
+      }
+      .form-body {
+        gap: 20px;
+        label {
+          span {
+            font-size: 20px;
+          }
+        }
+      }
+      .form-footer {
+        padding: 7px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .settings {
+    h3 {
+      text-align: center;
+    }
+    form {
+      .form-header {
+        padding: 7px 8px 0;
+        h4{
+          line-height: 1;
+        }
+      }
+      .form-body {
+        label {
+          input {
+            line-height: 1;
+            font-size: 20px;
+            height: 33px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,188 @@
+@import "src/assets/styles/mixins";
+@import "src/assets/styles/fonts";
+@import "src/assets/styles/variable";
+
+.server {
+  background-color: $background_color;
+
+  .container {
+    position: relative;
+
+    .background {
+      position: absolute;
+      right: -5px;
+      top: -50px;
+      max-width: 795px;
+      max-height: 706px;
+    }
+  }
+  .wrapper {
+    background: rgba(0, 0, 0, 0.2);
+    padding: 54px 0 107px;
+    position: relative;
+    z-index: 20;
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      .title {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        h2 {
+          @include title;
+          margin-bottom: 16px;
+        }
+        h3 {
+          font-family: 'Roboto', sans-serif;
+          font-style: normal;
+          font-weight: 700;
+          font-size: 40px;
+          text-align: center;
+          color: #FFFFFF;
+          margin-bottom: 15px;
+        }
+      }
+
+      .server-items {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 74px;
+        .server-item {
+          .server-item-photo {
+            width: 308px;
+            height: 149px;
+            background-color: #272934;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 17px 50px rgba(170, 33, 33, 0.25);
+            border-radius: 12px;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            &.one {
+              background-image: url("../../../../assets/images/main/server-item_1.webp");
+            }
+            &.two {
+              background-image: url("../../../../assets/images/main/server_item_2.webp");
+            }
+            &.three {
+              background-image: url("../../../../assets/images/main/server_item_3.webp");
+            }
+          }
+          .server-item-description {
+            margin-top: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .button {
+              font-weight: 300;
+              font-size: 20px;
+              line-height: 23px;
+              text-align: center;
+              color: #FFFFFF;
+              text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+              padding: 19px 13px;
+            }
+            .server-item-name {
+              font-family: 'Roboto', sans-serif;
+              font-style: normal;
+              color: #FFFFFF;
+              p:first-child {
+                font-weight: 700;
+                font-size: 24px;
+              }
+              p:last-child {
+                font-weight: 300;
+                font-size: 20px;
+              }
+
+            }
+          }
+        }
+      }
+
+    }
+  }
+}
+
+@media screen and (max-width: 1095px){
+  .server {
+    .background {
+      display: none;
+    }
+    .wrapper {
+      .container {
+        .title {
+          h2, h3 {
+            font-size: 30px;
+            line-height: 35px;
+          }
+        }
+
+        .server-items {
+          justify-content: space-between;
+          gap: 10px;
+          .server-item {
+
+            .server-item-photo {
+              width: 200px;
+              height: 110px;
+            }
+            .server-item-description {
+              .button {
+                padding: 7px 5px 7px 5px;
+                font-size: 13px;
+              }
+              .server-item-name {
+                p:first-child {
+                  font-weight: 700;
+                  font-size: 16px;
+                }
+                p:last-child {
+                  font-weight: 300;
+                  font-size: 16px;
+                  color: #ffffffa3;
+                }
+
+              }
+            }
+          }
+        }
+      }
+    }
+
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .server {
+    .wrapper {
+      padding: 0 0 15px 0;
+      .container {
+        padding: 0;
+        .title {
+          width: 100%;
+          padding-bottom: 59px;
+          background-color: $background_color;
+          margin-bottom: 23px;
+        }
+        .server-items {
+          justify-content: center;
+          gap: 40px;
+          flex-wrap: wrap;
+
+          .server-item {
+
+          }
+        }
+      }
+    }
+
+  }
+}
+
+

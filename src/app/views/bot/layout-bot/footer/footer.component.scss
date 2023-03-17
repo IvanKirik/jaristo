@@ -1,0 +1,46 @@
+@import "../../../../../assets/styles/variable";
+@import "../../../../../assets/styles/mixins";
+@import "../../../../../assets/styles/fonts";
+@import "../../../../../assets/styles/global";
+
+.footer {
+  border-radius: 10px;
+  position: sticky;
+  bottom: 0;
+  margin: 0 10px 10px;
+  .footer-container {
+    min-height: 70px;
+    background: $background_element;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    div {
+      font-family: 'Inter', sans-serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 24px;
+      color: #FFFFFF;
+      span {
+        font-family: inherit;
+        font-size: inherit;
+        color: #AA2121;
+      }
+    }
+
+  }
+}
+
+@media screen and (max-width: 1215px) {
+  .footer {
+    .footer-container {
+      min-height: 35px;
+      border-radius: 5px;
+      div {
+        font-size: 10px;
+      }
+    }
+  }
+}

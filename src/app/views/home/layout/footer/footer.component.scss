@@ -1,0 +1,122 @@
+@import "src/assets/styles/variable";
+@import "src/assets/styles/global";
+@import "src/assets/styles/fonts";
+@import "src/assets/styles/mixins";
+
+
+.footer {
+  padding: 85px 0 91px;
+  background-color: $background_color;
+  .container {
+    display: flex;
+    .footer-logo{
+      margin-right: 56px;
+      p {
+        position: relative;
+        z-index: 20;
+        @include description_text;
+        max-width: 215px;
+        font-size: 20px;
+        line-height: 23px;
+        margin-top: 20px;
+
+      }
+    }
+    .footer-nav {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 83px;
+      ul {
+        li {
+          position: relative;
+          z-index: 20;
+          margin-bottom: 29px;
+          list-style: none;
+          a {
+            @include description_text;
+            line-height: 23px;
+            &.title {
+              font-weight: 400;
+              color: #FFFFFF;
+            }
+          }
+          &:last-child {
+            margin-bottom: 0;
+          }
+
+
+        }
+
+      }
+    }
+
+  }
+}
+
+@media screen and (max-width: 930px) {
+  .footer {
+    .container {
+      .footer-logo {
+        p {
+          font-size: 16px;
+        }
+      }
+      .footer-nav {
+        ul {
+          li {
+            a {
+              font-size: 16px;
+              line-height: 17px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 640px) {
+  .footer {
+    .container {
+      .footer-nav {
+        gap: 22px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 475px) {
+  .footer {
+    padding: 20px 0 10px;
+    .container {
+      .footer-logo {
+        img {
+          max-width: 71px;
+        }
+        margin-right: 8px;
+        p {
+          font-size: 12px;
+        }
+      }
+      .footer-nav {
+        ul {
+          li {
+            a {
+              font-size: 12px;
+              line-height: 17px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 330px) {
+  .footer {
+    .container {
+      .footer-nav {
+        gap: 10px;
+      }
+    }
+  }
+}
+

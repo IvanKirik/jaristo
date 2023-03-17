@@ -1,0 +1,73 @@
+@import "../../../../../assets/styles/variable";
+@import "../../../../../assets/styles/mixins";
+@import "../../../../../assets/styles/fonts";
+@import "../../../../../assets/styles/global";
+
+
+.stream {
+  width: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 5px;
+  background-color: $background_color;
+  .header-window {
+    @include header_window_info;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+  }
+  .stream-body {
+
+    table {
+      @include table;
+      .fake-button {
+        white-space: nowrap;
+      }
+    }
+  }
+  .stream-footer {
+    padding: 8px 13px 9px;
+  }
+}
+
+@media screen and (max-width: 1215px) {
+  .stream {
+    .header-window {
+      h4 {
+        font-size: 20px;
+      }
+    }
+    .stream-body {
+      table {
+        thead {
+          tr {
+            td {
+              font-size: 16px;
+            }
+          }
+        }
+        tbody {
+          tr {
+            td {
+              font-size: 16px;
+              a {
+                font-size: 16px;
+              }
+              span {
+                font-size: 16px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .stream {
+    .header-window {
+      h4 {
+        margin-bottom: 0;
+        line-height: 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,179 @@
+@import "variable";
+
+@mixin title {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 56px;
+  color: #FFFFFF;
+}
+
+@mixin title_40 {
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 47px;
+  color: #FFFFFF;
+
+}
+
+@mixin title_36 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 42px;
+  color: #FFFFFF;
+  text-align: center;
+}
+
+@mixin title_32 {
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 32px;
+  line-height: 38px;
+  color: #FFFFFF;
+}
+
+@mixin description_text {
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 35px;
+  color: #ffffff8a;
+}
+
+@mixin description_text_16 {
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 174.69%;
+  color: #ffffff8a;
+  text-align: center;
+}
+
+@mixin header_window_info {
+  padding: 4px 14px 5px;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  background-color: $background_color;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  h4 {
+    @include title_32;
+  }
+  .header-action {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
+}
+
+@mixin table {
+  background-color: #FFFFFF7F;
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  width: 100%;
+  table-layout: auto;
+  border-spacing: 0 1px;
+
+  thead {
+    width: 100%;
+    tr {
+      background-color: $background_element;
+      width: 100%;
+      td {
+        text-align: left;
+        padding: 16px 13px;
+        font-weight: 400;
+        line-height: 23px;
+        color: #FFFFFF;
+        font-size: 20px;
+
+        &:first-child {
+          width: 16%;
+        }
+      }
+
+    }
+  }
+  tbody {
+    width: 100%;
+    tr {
+      background-color: $background_element;
+      td {
+        font-weight: 300;
+        font-size: 20px;
+        line-height: 23px;
+        text-align: left;
+        padding: 15px 13px 28px;
+        color: #FFFFFF;
+        a {
+          font-weight: 300;
+          font-size: 20px;
+          line-height: 23px;
+          text-align: left;
+          padding: 15px 13px 28px;
+          color: #AA2121;
+          text-shadow: 0 0 4px #AA2121;
+        }
+        &:first-child {
+          width: 16%;
+        }
+        &.button-bot {
+          cursor: default;
+        }
+      }
+    }
+  }
+}
+
+@mixin checkbox {
+  .label {
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+  #checkbox {
+    display: none;
+  }
+  #checkbox+.label, #checkbox+.label::before, #checkbox+.label::after {
+    transition: all .3s;
+  }
+  #checkbox+.label {
+    display: inline-block;
+    position: relative;
+    width: 36px;
+    height: 21px;
+    border-radius: 45%;
+    cursor: pointer;
+  }
+
+  #checkbox+.label::after {
+    border-radius: 50%;
+    content: '';
+    position: absolute;
+    top: 4px;
+    left: 3px;
+    width: 12px;
+    height: 12px;
+    background-color: black;
+  }
+
+  #checkbox:checked+.label::after {
+    left: 17px;
+  }
+
+  #checkbox+.label {
+    background-color: #ccc;
+  }
+  #checkbox:checked+.label {
+    background: #AA2121;
+    border: 1px solid #000000;
+    box-shadow: 0 0 4px #AA2121;
+  }
+}
+
+

@@ -1,0 +1,191 @@
+<section class="embedding" [class.active]="!stateWindowMessage && !stateWindowYourEmbedding && !stateWindowEmbedding">
+  <div class="embedding-header">
+    <h3>Создать новое встраивание</h3>
+    <div class="embedding-action">
+      <button>Сбросить</button>
+      <button>Сохранить</button>
+      <button>Опубликовать</button>
+    </div>
+  </div>
+  <div class="embedding-body">
+    <div class="embedding-window">
+      <div class="embedding-window-header"
+           (click)="stateWindowEmbedding = !stateWindowEmbedding">
+          <h4>Встраивание</h4>
+          <div class="header-action">
+            <button class="mini_btn">
+              <svg width="19" height="10" viewBox="0 0 19 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M18.5672 7.59248L14.2094 3.39241L11.5485 0.814796C11.0064 0.293049 10.2715 0 9.50535 0C8.73919 0 8.00435 0.293049 7.46218 0.814796L0.429884 7.59248C-0.493274 8.48222 0.171943 10 1.46165 10H17.5355C18.8388 10 19.4904 8.48222 18.5672 7.59248Z"
+                  fill="white"/>
+              </svg>
+            </button>
+        </div>
+      </div>
+      <div class="embedding-window-body" *ngIf="stateWindowEmbedding">
+        <div class="embedding-window-body-item">
+          <h5>Канал</h5>
+          <div class="select-bot">
+          <span>
+            <svg width="10" height="19" viewBox="0 0 10 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+            d="M2.40752 18.5672L6.60759 14.2094L9.1852 11.5485C9.70695 11.0064 10 10.2715 10 9.50535C10 8.73919 9.70695 8.00435 9.1852 7.46218L2.40752 0.429884C1.51778 -0.493275 -7.51586e-09 0.171942 -6.38907e-08 1.46165L-7.665e-07 17.5355C-8.23468e-07 18.8388 1.51778 19.4904 2.40752 18.5672Z"
+            fill="white"/>
+            </svg>
+          </span>
+            <select>
+              <option disabled selected hidden>Select a channal</option>
+              <option value="1"></option>
+            </select>
+          </div>
+        </div>
+        <div class="embedding-window-body-item">
+          <h5>Embed name</h5>
+          <div class="select-bot">
+          <span>
+            <svg width="10" height="19" viewBox="0 0 10 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M2.40752 18.5672L6.60759 14.2094L9.1852 11.5485C9.70695 11.0064 10 10.2715 10 9.50535C10 8.73919 9.70695 8.00435 9.1852 7.46218L2.40752 0.429884C1.51778 -0.493275 -7.51586e-09 0.171942 -6.38907e-08 1.46165L-7.665e-07 17.5355C-8.23468e-07 18.8388 1.51778 19.4904 2.40752 18.5672Z"
+              fill="white"/>
+            </svg>
+          </span>
+            <select>
+              <option disabled selected hidden>Insert a name</option>
+              <option value="1"></option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="embedding-window">
+      <div class="embedding-window-header" (click)="stateWindowYourEmbedding = !stateWindowYourEmbedding">
+        <h4>Ваши встраивания</h4>
+        <div class="header-action">
+          <button class="mini_btn">
+            <svg width="19" height="10" viewBox="0 0 19 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M18.5672 7.59248L14.2094 3.39241L11.5485 0.814796C11.0064 0.293049 10.2715 0 9.50535 0C8.73919 0 8.00435 0.293049 7.46218 0.814796L0.429884 7.59248C-0.493274 8.48222 0.171943 10 1.46165 10H17.5355C18.8388 10 19.4904 8.48222 18.5672 7.59248Z"
+                fill="white"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div class="embedding-window-body" *ngIf="stateWindowYourEmbedding">
+        <div class="table">
+          <div class="table-head">
+            <div>Встраивание</div>
+            <div>Статус</div>
+            <div>Время</div>
+          </div>
+          <div class="table-body">
+            <div class="table-body-item">
+              <div>asd<span><br>#основной</span></div>
+              <div><span class="button-bot">Draft</span></div>
+              <div>Not published yet</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="embedding-window message">
+      <div class="embedding-window-header last-window" (click)="stateWindowMessage = !stateWindowMessage">
+        <div class="title-window">
+          <h4>Сообщение</h4>
+          <button class="button-bot">
+            <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1.17172 11.1414L1.17217 11.1421C3.41201 14.6715 6.64787 16.63 10 16.63C11.6796 16.63 13.3196 16.14 14.8274 15.2145C16.3358 14.2787 17.7039 12.9055 18.8284 11.1413L18.8291 11.1402C19.266 10.4585 19.5 9.52796 19.5 8.56875C19.5 7.60968 19.2661 6.67595 18.8283 5.98861L18.8282 5.98844C16.5878 2.46788 13.3515 0.5 10 0.5C8.32039 0.5 6.68041 0.990033 5.17256 1.91551C3.66421 2.8513 2.29615 4.22445 1.17172 5.98861V11.1414ZM1.17172 11.1414C0.733796 10.4538 0.5 9.52252 0.5 8.565M1.17172 11.1414L0.5 8.565M0.5 8.565C0.5 7.60754 0.733768 6.67626 1.17164 5.98874L0.5 8.565ZM5.46 8.57C5.46 11.0753 7.48305 13.11 10 13.11C12.5169 13.11 14.54 11.0753 14.54 8.57C14.54 6.06466 12.5169 4.03 10 4.03C7.48305 4.03 5.46 6.06466 5.46 8.57Z" fill="white" stroke="black"/>
+            </svg>
+            Предпросмотр
+          </button>
+        </div>
+        <div class="header-action">
+          <button class="mini_btn">
+            <svg width="19" height="10" viewBox="0 0 19 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M18.5672 7.59248L14.2094 3.39241L11.5485 0.814796C11.0064 0.293049 10.2715 0 9.50535 0C8.73919 0 8.00435 0.293049 7.46218 0.814796L0.429884 7.59248C-0.493274 8.48222 0.171943 10 1.46165 10H17.5355C18.8388 10 19.4904 8.48222 18.5672 7.59248Z"
+                fill="white"/>
+            </svg>
+          </button>
+        </div>
+
+      </div>
+      <div class="embedding-window-body" *ngIf="stateWindowMessage">
+        <div class="embedding-window-body-line"></div>
+        <div class="embedding-window-body-field">
+          <div class="field-item">
+            <div class="field-item-title">Цвет полосы</div>
+            <div class="colors">
+              <label>
+                <input type="checkbox">
+              </label>
+              <label>
+                <input type="checkbox">
+              </label>
+              <label>
+                <input type="checkbox">
+              </label>
+              <label>
+                <input type="checkbox">
+              </label>
+              <label>
+                <input type="checkbox">
+              </label>
+              <label>
+                <input type="checkbox">
+              </label>
+            </div>
+          </div>
+          <div class="field-item author">
+            <div class="author-photo">
+              <img src="assets/images/bot/img-placeholder.png" alt="photo">
+            </div>
+            <div class="field-item">
+              <div class="field-item-title">Имя автора</div>
+              <label>
+                <input class="input-bot" type="text" placeholder="Имя автора">
+              </label>
+            </div>
+          </div>
+          <div class="field-item">
+            <div class="field-item-title">Текст заголовка</div>
+            <label>
+              <input class="input-bot" type="text" placeholder="Текст заголовка">
+            </label>
+          </div>
+          <div class="field-item">
+            <div class="field-item-title">Шаблон сообщения</div>
+            <div class="textarea-field">
+              <textarea cols="30" rows="5" placeholder="Ваше сообщение..."></textarea>
+              <div class="message-length">0/2000</div>
+            </div>
+          </div>
+          <div class="field-item">
+            <div class="field-item-title">Дополнительные поля</div>
+            <label class="additionally-field">
+              <input class="input-bot" type="text" placeholder="Название поля">
+            </label>
+            <label>
+              <input class="input-bot" type="text" placeholder="Значение поля">
+            </label>
+          </div>
+          <div class="field-item">
+            <img src="assets/images/bot/img-placeholder.png" alt="photo">
+          </div>
+          <div class="field-item author">
+            <div class="author-photo">
+              <img src="assets/images/bot/img-placeholder.png" alt="photo">
+            </div>
+            <div class="field-item">
+              <div class="field-item-title">Текст нижнего колонтитула</div>
+              <label>
+                <input class="input-bot" type="text" placeholder="Текст заголовка">
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+

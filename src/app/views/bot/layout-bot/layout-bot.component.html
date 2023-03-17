@@ -1,0 +1,26 @@
+<div class="layout" [class.sidebar-open]="!sidebarOpen">
+  <div class="container-bot">
+    <header class="header"></header>
+    <div class="user-info">
+      <div class="user-photo">
+        <img src="../../../../assets/images/bot/user.webp" alt="photo">
+      </div>
+      <div class="user-name">
+        <span>Oleg Jaristo</span>
+        <span>#9280</span>
+      </div>
+    </div>
+    <div class="wrapper">
+      <sidebar class="sidebar"></sidebar>
+      <div class="content">
+        <div class="content-router">
+          <router-outlet></router-outlet>
+        </div>
+        <footer class="footer"></footer>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+

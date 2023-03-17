@@ -1,0 +1,14 @@
+<section class="commands">
+  <h3>Список команд</h3>
+  <div class="commands-items">
+    <div class="commands-item" *ngFor="let command of commands">
+      <div class="commands-item-header"
+           (click) = "command.vision = !command.vision"
+      >{{command.name}}</div>
+      <div class="commands-item-footer"
+           [class.active]="command.vision"
+      >{{command.description}}</div>
+    </div>
+  </div>
+</section>
+

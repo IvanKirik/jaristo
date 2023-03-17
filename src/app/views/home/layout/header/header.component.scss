@@ -1,0 +1,119 @@
+@import "src/assets/styles/variable";
+@import "src/assets/styles/fonts";
+
+.header {
+  padding-top: 35px;
+  padding-bottom: 38px;
+  background-color: $background_color;
+  .container {
+    position: relative;
+   .header-bg {
+     position: absolute;
+     top: -36px;
+     left: 232px;
+   }
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .login {
+        a {
+          font-family: 'Roboto', sans-serif;
+          font-weight: 300;
+          font-size: 32px;
+          color: #FFFFFF;
+          margin-right: 60px;
+          position: relative;
+          z-index: 20;
+        }
+        .login-btn {
+          padding: 1px 18px;
+          border-radius: 14px;
+          border: 0;
+          cursor: pointer;
+          font-family: 'Roboto', sans-serif;
+          font-weight: 300;
+          font-size: 32px;
+          line-height: 38px;
+          color: #FFFFFF;
+          text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+          background-color: $color_red_button;
+        }
+        .burger {
+          display: none;
+          width: 24px;
+          height: 24px;
+          background-image: url("../../../../../assets/images/main/burger.png");
+          background-repeat: no-repeat;
+          background-position: center;
+          border: 1px solid #000000;
+          box-shadow: 0 0 4px rgba(170, 33, 33, 0.48);
+          border-radius: 5px;
+          margin-top: 2px;
+        }
+      }
+    }
+
+  }
+}
+
+@media screen and (max-width: 930px){
+  .header {
+    padding-top: 43px;
+    padding-bottom: 38px;
+    .container {
+      .header-bg {
+        display: none;
+      }
+      .nav {
+        .logo {
+          img {
+            max-width: 71px;
+
+          }
+        }
+        .login {
+          a {
+            font-size: 16px;
+            margin-right: 24px;
+          }
+          .login-btn {
+            font-size: 16px;
+            padding: 1px 15px;
+          }
+
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 475px) {
+  .header {
+    padding: 25px 0 26px;
+    .container {
+      .nav {
+        .login {
+          display: flex;
+          flex-direction: column;
+          align-items: end;
+          a {
+            display: none;
+          }
+          .login-btn {
+            width: 76px;
+            height: 30px;
+            padding: 6px 15px;
+            background: #AA2121;
+            border: 1px solid #000000;
+            box-shadow: 0 10px 10px -7px rgba(175, 34, 34, 0.35);
+            border-radius: 6px;
+            line-height: 19px;
+          }
+          .burger {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}
