@@ -1,0 +1,36 @@
+@import "../styles/variable";
+
+@-webkit-keyframes color-change-3x {
+  0% {
+    background: $background_color;
+  }
+  25% {
+    background: #282831;
+  }
+  50% {
+    background: #2f1616;
+  }
+  75% {
+    background: #4b1818;
+  }
+  100% {
+    background: $background_color;
+  }
+}
+@keyframes color-change-3x {
+  0% {
+    background: $background_color;
+  }
+  25% {
+    background: #282831;
+  }
+  50% {
+    background: #2f1616;
+  }
+  75% {
+    background: #4b1818;
+  }
+  100% {
+    background: $background_color;
+  }
+}
