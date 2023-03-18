@@ -130,6 +130,34 @@
       }
     }
   }
+
+  @media screen and (max-width: 520px) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    thead {
+
+      tr {
+        display: flex;
+        flex-direction: column;
+        td {
+          min-height: 80px;
+          padding: 5px;
+        }
+      }
+    }
+    tbody {
+      tr {
+        display: flex;
+        flex-direction: column;
+        td {
+          min-height: 80px;
+          padding: 5px;
+        }
+      }
+    }
+
+  }
 }
 
 @mixin checkbox {
