@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {BotService} from "../../../../shared/services/bot.service";
 
 @Component({
   selector: 'footer',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FooterComponent implements OnInit {
 
-  constructor() { }
+  public sidebarOpen: boolean = false;
+
+  constructor(private botService: BotService) { }
 
   ngOnInit(): void {
+  }
+
+  public onSidebar() {
+    this.sidebarOpen = !this.sidebarOpen;
+    this.botService.setOpenSidebar(this.sidebarOpen)
   }
 
 }

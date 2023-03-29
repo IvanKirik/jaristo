@@ -5,9 +5,7 @@
 
 .footer {
   border-radius: 10px;
-  position: sticky;
-  bottom: 0;
-  margin: 0 10px 10px;
+  //margin: 0 10px 10px;
   .footer-container {
     min-height: 70px;
     background: $background_element;
@@ -33,14 +31,15 @@
   }
 }
 
-@media screen and (max-width: 1215px) {
-  .footer {
-    .footer-container {
-      min-height: 35px;
-      border-radius: 5px;
-      div {
-        font-size: 10px;
-      }
-    }
-  }
-}
+//@media screen and (max-width: 1215px) {
+//  .footer {
+//    .footer-container {
+//      min-height: 35px;
+//      border-radius: 5px;
+//      div {
+//        font-size: 10px;
+//      }
+//    }
+//  }
+//}
+

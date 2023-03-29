@@ -1,6 +1,7 @@
 <div class="layout" [class.sidebar-open]="!sidebarOpen">
-  <div class="container-bot">
-    <header class="header"></header>
+  <header class="header"></header>
+  <sidebar class="sidebar"></sidebar>
+  <div class="content-router">
     <div class="user-info">
       <div class="user-photo">
         <img src="../../../../assets/images/bot/user.webp" alt="photo">
@@ -10,16 +11,9 @@
         <span>#9280</span>
       </div>
     </div>
-    <div class="wrapper">
-      <sidebar class="sidebar"></sidebar>
-      <div class="content">
-        <div class="content-router">
-          <router-outlet></router-outlet>
-        </div>
-        <footer class="footer"></footer>
-      </div>
-    </div>
+    <router-outlet></router-outlet>
   </div>
+  <footer class="footer"></footer>
 </div>
 
 
